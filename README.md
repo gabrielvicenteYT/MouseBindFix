@@ -1,3 +1,3 @@
 # MouseBindFix
 
-MouseBindFix fixes an issue in keybinds bound to mouse functions do not work while in inventories
+MouseBindFix fixes an issue where keybinds bound to mouse buttons do not work in inventories in Minecraft
