@@ -1,0 +1,16 @@
+[
+{
+  "modid": "mousebindfix",
+  "name": "Mouse Bind Fix",
+  "description": "Fixes mouse keybinds in inventories.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Sk1er"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
