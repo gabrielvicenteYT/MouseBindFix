@@ -1,7 +1,7 @@
 package club.sk1er.mods.mousefix;
 
-import net.minecraftforge.fml.common.DummyModContainer;
-import net.minecraftforge.fml.common.ModMetadata;
+import cpw.mods.fml.common.DummyModContainer;
+import cpw.mods.fml.common.ModMetadata;
 
 import java.util.Collections;
 
@@ -15,7 +15,6 @@ public class MouseBindFix extends DummyModContainer {
         ModMetadata metadata = new ModMetadata();
         metadata.modId = "mousebindfix";
         metadata.version = "1.0";
-
         metadata.name = "Mouse Binding Fix";
         metadata.description = "Fixes mouse keybinds in inventories.";
 
