@@ -16,7 +16,7 @@ public class MouseBindFix extends DummyModContainer {
         metadata.modId = "mousebindfix";
         metadata.version = "1.0";
 
-        metadata.name = "Mouse Binding Fix";
+        metadata.name = "Mouse Bind Fix";
         metadata.description = "Fixes mouse keybinds in inventories.";
 
         metadata.url = "";
