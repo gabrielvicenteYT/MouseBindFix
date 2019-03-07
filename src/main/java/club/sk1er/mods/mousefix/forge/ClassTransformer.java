@@ -12,9 +12,7 @@ import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.tree.ClassNode;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public final class ClassTransformer implements IClassTransformer {
 
@@ -41,7 +39,6 @@ public final class ClassTransformer implements IClassTransformer {
 
     @Override public byte[] transform(String name, String transformedName, byte[] bytes) {
         if (bytes == null) return null;
-
 
         FullClassTransformer fullClassTransformer = this.fullClassTransformerMap.get(transformedName);
         if (fullClassTransformer != null) {

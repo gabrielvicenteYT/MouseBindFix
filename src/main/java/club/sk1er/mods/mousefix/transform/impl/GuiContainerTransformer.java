@@ -19,34 +19,28 @@ public final class GuiContainerTransformer implements FramesTransformer {
 
     @Override
     public void transform(ClassNode classNode, String name) {
-
         for (MethodNode method : classNode.methods) {
             String methodName = FMLDeobfuscatingRemapper.INSTANCE.mapMethodName(classNode.name, method.name, method.desc);
 
             if (methodName.equals("mouseClicked") || methodName.equalsIgnoreCase("func_73864_a")) {
-                method.instructions.insertBefore(method.instructions.getFirst(), this.getMod());
+                method.instructions.insertBefore(method.instructions.getLast().getPrevious(), this.getMod());
             }
-
-
         }
     }
 
     private InsnList getMod() {
         InsnList insnList = new InsnList();
-
         insnList.add(new VarInsnNode(Opcodes.ALOAD, 0));
         insnList.add(new VarInsnNode(Opcodes.ILOAD, 3));
 
         insnList.add(new VarInsnNode(Opcodes.BIPUSH, 100));
         insnList.add(new InsnNode(Opcodes.ISUB));
 
-
-//        insnList.add(new MethodInsnNode(Opcodes.INVOKEVIRTUAL, "net/minecraft/client/gui/inventory/GuiContainer",
-//                "checkHotbarKeys", "(I)Z", false));
-
-
-        insnList.add(new MethodInsnNode(Opcodes.INVOKEVIRTUAL, "net/minecraft/client/gui/inventory/GuiContainer",
-                "func_146983_a", "(I)Z", false));
+        insnList.add(new MethodInsnNode(
+                Opcodes.INVOKEVIRTUAL,
+                "net/minecraft/client/gui/inventory/GuiContainer",
+                "func_146983_a", "(I)Z", false
+        ));
         return insnList;
     }
 
