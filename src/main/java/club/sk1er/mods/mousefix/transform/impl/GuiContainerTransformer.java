@@ -24,7 +24,7 @@ public final class GuiContainerTransformer implements FramesTransformer {
             String methodName = FMLDeobfuscatingRemapper.INSTANCE.mapMethodName(classNode.name, method.name, method.desc);
 
             if (methodName.equals("mouseClicked") || methodName.equalsIgnoreCase("func_73864_a")) {
-                method.instructions.insertBefore(method.instructions.getFirst(), this.getMod());
+                method.instructions.insertBefore(method.instructions.getLast().getPrevious(), this.getMod());
             }
 
 

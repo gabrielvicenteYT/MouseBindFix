@@ -17,7 +17,7 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "1.0"
+version = "1.1"
 group = "com.vikestep.anticacti" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "[1.7.10] Sk1er MouseBindFix"
 sourceCompatibility = 1.8
