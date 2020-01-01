@@ -1,6 +1,5 @@
 package club.sk1er.mods.mousefix.forge;
 
-import club.sk1er.mods.mousefix.MouseBindFix;
 import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
 
 import java.util.Map;
@@ -16,7 +15,7 @@ public final class FMLLoadingPlugin implements IFMLLoadingPlugin {
 
     @Override
     public String getModContainerClass() {
-        return MouseBindFix.class.getName();
+        return null;
     }
 
     @Override

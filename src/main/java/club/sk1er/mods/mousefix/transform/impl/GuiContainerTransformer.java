@@ -1,7 +1,6 @@
 package club.sk1er.mods.mousefix.transform.impl;
 
 import club.sk1er.mods.mousefix.transform.FramesTransformer;
-import net.minecraftforge.fml.common.asm.transformers.deobf.FMLDeobfuscatingRemapper;
 import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.tree.ClassNode;
 import org.objectweb.asm.tree.InsnList;
@@ -20,9 +19,9 @@ public final class GuiContainerTransformer implements FramesTransformer {
     @Override
     public void transform(ClassNode classNode, String name) {
         for (MethodNode method : classNode.methods) {
-            String methodName = FMLDeobfuscatingRemapper.INSTANCE.mapMethodName(classNode.name, method.name, method.desc);
+            String methodName = mapMethodName(classNode, method);
 
-            if (methodName.equals("mouseClicked") || methodName.equalsIgnoreCase("func_73864_a")) {
+            if (methodName.equals("mouseClicked") || methodName.equals("func_73864_a")) {
                 method.instructions.insertBefore(method.instructions.getLast().getPrevious(), this.getMod());
             }
         }
