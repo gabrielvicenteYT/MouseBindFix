@@ -1,10 +1,12 @@
 package club.sk1er.mods.mousefix.forge;
 
+import net.minecraftforge.common.ForgeVersion;
 import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
 
 import java.util.Map;
 
 @SuppressWarnings("unused")
+@IFMLLoadingPlugin.MCVersion(ForgeVersion.mcVersion)
 @IFMLLoadingPlugin.SortingIndex(1000)
 public final class FMLLoadingPlugin implements IFMLLoadingPlugin {
 
