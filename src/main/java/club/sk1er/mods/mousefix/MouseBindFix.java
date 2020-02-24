@@ -5,7 +5,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 
-@Mod(modid = "mousebindfix", name = "Mouse Bind Fix", version = "1.3")
+@Mod(modid = "mousebindfix", name = "Mouse Bind Fix", version = "1.3.1")
 public class MouseBindFix {
 
     @Mod.EventHandler

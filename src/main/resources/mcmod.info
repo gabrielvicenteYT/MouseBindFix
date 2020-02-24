@@ -3,7 +3,7 @@
     "modid": "mousebindfix",
     "name": "Mouse Bind Fix",
     "description": "Fixes mouse keybinds in inventories.",
-    "version": "1.2.1",
+    "version": "${version}",
     "mcversion": "${mcversion}",
     "url": "",
     "updateUrl": "",
