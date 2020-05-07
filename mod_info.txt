@@ -1,3 +1,5 @@
+<p><b>This has been superseded by <a href="https://sk1er.club/mods/patcher">Patcher.</a></b></p>
+<br>
 <p>MouseBindFix fixes an issue where keybinds bound to mouse buttons do not work in inventories in Minecraft</p>
 <br>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/U0t8AvO8tlo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
